@@ -1,0 +1,26 @@
+{
+  "name": "camera_arm",
+  "voxel_mm": 0.9,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 1,
+  "volume_mm3": 31519.731085423195,
+  "bounds_mm": [
+    [
+      -11.998329162597656,
+      -7.105348587036133,
+      -16.44274139404297
+    ],
+    [
+      142.0000762939453,
+      7.105352401733398,
+      54.99627685546875
+    ]
+  ],
+  "vertex_count": 20780,
+  "face_count": 41576,
+  "limitations": [
+    "Topology-inspired shape, NOT stress-optimized or FEA verified",
+    "Clearance, hole-fit, load rating and printability unverified"
+  ]
+}

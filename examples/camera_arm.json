@@ -1,0 +1,29 @@
+{
+  "name": "camera_arm",
+  "description": "Illustrative organic two-pivot camera arm, XY plane thickness along Y. Not load tested.",
+  "units": "mm",
+  "voxel_mm": 0.9,
+  "blend_mm": 2.0,
+  "nodes": {
+    "base": [0, 0, 0],
+    "elbow_top": [34, 0, 29],
+    "elbow_bottom": [38, 0, -12],
+    "bridge": [78, 0, 9],
+    "upper": [82, 0, 33],
+    "camera": [130, 0, 43]
+  },
+  "mounts": [
+    {"node": "base", "outer_radius_mm": 12, "hole_radius_mm": 3.5, "width_mm": 14},
+    {"node": "camera", "outer_radius_mm": 12, "hole_radius_mm": 3.5, "width_mm": 14}
+  ],
+  "struts": [
+    {"a":"base","b":"elbow_top","radius_a_mm":5.6,"radius_b_mm":4.0,"control":[14,0,21]},
+    {"a":"base","b":"elbow_bottom","radius_a_mm":5.5,"radius_b_mm":3.6,"control":[14,0,-9]},
+    {"a":"elbow_top","b":"upper","radius_a_mm":4.6,"radius_b_mm":4.2,"control":[58,0,39]},
+    {"a":"elbow_top","b":"bridge","radius_a_mm":3.3,"radius_b_mm":3.3,"control":[50,0,14]},
+    {"a":"elbow_bottom","b":"bridge","radius_a_mm":4.2,"radius_b_mm":3.6,"control":[57,0,-12]},
+    {"a":"bridge","b":"upper","radius_a_mm":3.3,"radius_b_mm":3.3},
+    {"a":"upper","b":"camera","radius_a_mm":4.2,"radius_b_mm":5.6,"control":[105,0,45]},
+    {"a":"bridge","b":"camera","radius_a_mm":3.9,"radius_b_mm":5.2,"control":[108,0,14]}
+  ]
+}

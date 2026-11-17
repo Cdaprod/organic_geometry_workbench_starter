@@ -1,0 +1,25 @@
+{
+  "name": "triangular_bracket",
+  "description": "Three-mount, organic open-cell support plate example; not structurally verified.",
+  "units": "mm", "voxel_mm": 0.9, "blend_mm": 2.1,
+  "nodes": {
+    "left": [0,0,0], "right":[95,0,0], "top":[45,0,76],
+    "branch_left":[26,0,30],"branch_right":[68,0,30],"core":[47,0,37]
+  },
+  "mounts": [
+    {"node":"left","outer_radius_mm":10,"hole_radius_mm":3.2,"width_mm":12},
+    {"node":"right","outer_radius_mm":10,"hole_radius_mm":3.2,"width_mm":12},
+    {"node":"top","outer_radius_mm":10,"hole_radius_mm":3.2,"width_mm":12}
+  ],
+  "struts": [
+    {"a":"left","b":"branch_left","radius_a_mm":5,"radius_b_mm":3.3},
+    {"a":"branch_left","b":"top","radius_a_mm":3.3,"radius_b_mm":4.8,"control":[26,0,55]},
+    {"a":"top","b":"branch_right","radius_a_mm":4.8,"radius_b_mm":3.2,"control":[73,0,63]},
+    {"a":"branch_right","b":"right","radius_a_mm":3.2,"radius_b_mm":5},
+    {"a":"left","b":"core","radius_a_mm":4.8,"radius_b_mm":3.0,"control":[29,0,8]},
+    {"a":"core","b":"right","radius_a_mm":3.0,"radius_b_mm":4.8,"control":[67,0,13]},
+    {"a":"branch_left","b":"core","radius_a_mm":3.0,"radius_b_mm":2.8},
+    {"a":"core","b":"branch_right","radius_a_mm":2.8,"radius_b_mm":3.0},
+    {"a":"core","b":"top","radius_a_mm":3.0,"radius_b_mm":4.3}
+  ]
+}

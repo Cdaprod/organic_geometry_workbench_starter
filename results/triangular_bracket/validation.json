@@ -1,0 +1,26 @@
+{
+  "name": "triangular_bracket",
+  "voxel_mm": 0.9,
+  "watertight": true,
+  "winding_consistent": true,
+  "components": 1,
+  "volume_mm3": 25231.704409713417,
+  "bounds_mm": [
+    [
+      -9.995488166809082,
+      -6.2370147705078125,
+      -9.997993469238281
+    ],
+    [
+      104.99554443359375,
+      6.236972808837891,
+      85.99553680419922
+    ]
+  ],
+  "vertex_count": 18753,
+  "face_count": 37534,
+  "limitations": [
+    "Topology-inspired shape, NOT stress-optimized or FEA verified",
+    "Clearance, hole-fit, load rating and printability unverified"
+  ]
+}
