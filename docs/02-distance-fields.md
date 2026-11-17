@@ -31,7 +31,7 @@ v = b - a
 # Projection onto the infinite line; clamp to the finite segment.
 t = np.clip(np.dot(p-a, v) / np.dot(v, v), 0, 1)
 closest = a + t * v
-return np.linalg.norm(p-closest) - radius
+distance = np.linalg.norm(p-closest) - radius
 ```
 
 Read that step by step:
