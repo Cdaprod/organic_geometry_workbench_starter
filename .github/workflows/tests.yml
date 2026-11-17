@@ -1,0 +1,19 @@
+name: Geometry learning examples
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -e .
+      - run: python -m unittest discover -s tests -v
+      - run: python -m organic.field_lab --out "$RUNNER_TEMP/field_lab.png"
+      - run: python -m organic.build examples/first_arm.json --out "$RUNNER_TEMP/models"
