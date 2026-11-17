@@ -1,0 +1,24 @@
+{
+  "name": "first_arm",
+  "description": "First independent build: two protected pivots, two paths and one cross-brace. Topology-inspired, not load-rated.",
+  "units": "mm",
+  "voxel_mm": 1.2,
+  "blend_mm": 2.0,
+  "nodes": {
+    "base": [0, 0, 0],
+    "upper": [35, 0, 28],
+    "lower": [35, 0, -12],
+    "tip": [85, 0, 20]
+  },
+  "mounts": [
+    {"node": "base", "outer_radius_mm": 11, "hole_radius_mm": 3.5, "width_mm": 12},
+    {"node": "tip", "outer_radius_mm": 11, "hole_radius_mm": 3.5, "width_mm": 12}
+  ],
+  "struts": [
+    {"a": "base", "b": "upper", "radius_a_mm": 5, "radius_b_mm": 3.5, "control": [14, 0, 20]},
+    {"a": "upper", "b": "tip", "radius_a_mm": 3.5, "radius_b_mm": 5, "control": [58, 0, 35]},
+    {"a": "base", "b": "lower", "radius_a_mm": 5, "radius_b_mm": 3.5, "control": [17, 0, -12]},
+    {"a": "lower", "b": "tip", "radius_a_mm": 3.5, "radius_b_mm": 5, "control": [62, 0, -12]},
+    {"a": "upper", "b": "lower", "radius_a_mm": 3.0, "radius_b_mm": 3.0}
+  ]
+}
